@@ -4,9 +4,9 @@ This repository provides a MATLAB-based, fully coupled poromechanical XFEM frame
 
 ## Features
 - 2D poroelastic domain using standard finite elements
-- XFEM enrichment for zero-thickness fracture representation
+- Heaviside and crack tip enrichment for intersected elements
 - Rate-and-state friction behavior for seismic slip
-- Fully coupled hydro-mechanical solution using Newton–Raphson iterations
+- Dynamic fully coupled hydro-mechanical solution using Newton–Raphson iterations
 - Adaptive time stepping based on slip-velocity criteria
 - Contact mechanics enforced through Lagrange multipliers
 - Fluid exchange between fracture and surrounding matrix
