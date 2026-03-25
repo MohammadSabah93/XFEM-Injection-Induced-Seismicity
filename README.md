@@ -9,8 +9,8 @@ The simulator is designed to study the transition between aseismic and seismic s
 
 Key Features:
 
-2D poroelastic domain using standard finite elements
-XFEM enrichment (Heaviside and crack-tip functions) for fracture representation
+2D poroelastic domain using standard finite elements, 
+XFEM enrichment (Heaviside and crack-tip functions) for fracture representation, 
 Fully coupled hydro-mechanical formulation
 Rate-and-state friction law for fault slip
 Dynamic contact constraints along fracture interfaces
