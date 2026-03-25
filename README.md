@@ -9,14 +9,23 @@ The simulator is designed to study the transition between aseismic and seismic s
 
 Key Features
 2D poroelastic domain using standard finite elements
+
 XFEM enrichment (Heaviside and crack-tip functions) for fracture representation
+
 Fully coupled hydro-mechanical formulation
+
 Rate-and-state friction law for fault slip
+
 Dynamic contact constraints along fracture interfaces
+
 Newton–Raphson iterative solution scheme
+
 Adaptive time stepping based on slip-velocity criteria
+
 Fluid exchange between fracture and surrounding matrix
+
 Computation of seismicity-related metrics (moment magnitude, stress drop, slip distribution, etc.)
+
 Contact Algorithms
 
 The codebase includes two alternative formulations for enforcing normal contact constraints along fracture interfaces:
