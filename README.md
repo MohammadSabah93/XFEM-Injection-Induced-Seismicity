@@ -32,5 +32,6 @@ The Lagrange multiplier formulation enforces contact constraints exactly by intr
 
 ## Citing
 If you use the developed code in your research, we ask you to cite the following publication
+
 Sabah, M., Hofmann, H., Cacace, M., Jalali, M. R., & Kivi, I. R. (2026). Modeling Injection-Induced Seismicity Using a Fully Coupled Poroviscoelasto-Dynamic Extended Finite Element Approach with Stabilized Contact and Rate-and-State Friction. Computers and Geotechnics, 191, 107803. https://doi.org/10.1016/j.compgeo.2025.107803 
 
