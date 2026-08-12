@@ -1,37 +1,43 @@
-## XFEM Injection-Induced Seismicity Simulator
+# XFEM Simulator for Injection-Induced Seismicity
 
-XFEM Injection-Induced Seismicity Simulator
-Overview
+[![MATLAB](https://img.shields.io/badge/MATLAB-research%20code-e16737)](https://www.mathworks.com/products/matlab.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compgeo.2025.107803-blue)](https://doi.org/10.1016/j.compgeo.2025.107803)
 
-This repository provides a MATLAB-based, fully coupled poromechanical extended finite element method (XFEM) framework for modeling injection-induced seismicity in fractured reservoirs. The numerical formulation captures fracture slip governed by rate-and-state friction, fluid pressure evolution within fractures, and hydro-mechanical coupling with the surrounding porous medium.
+A research framework for simulating injection-induced fault reactivation using a fully coupled poroviscoelastodynamic extended finite element method (XFEM).
 
-The simulator is designed to study the transition between aseismic and seismic slip under fluid injection, with particular emphasis on fault reactivation and induced seismic events.
+## Scientific scope
 
-Key Features:
+The associated formulation resolves the coupled processes that connect reservoir pressurization to fault slip and dynamic rupture:
 
-2D dynamic poroelastic domain using standard finite elements, 
-XFEM enrichment (Heaviside and crack-tip functions) for fracture representation, 
-Fully coupled hydro-mechanical formulation, 
-Rate-and-state friction law for fault slip, 
-Dynamic contact constraints along fracture interfaces, 
-Newton–Raphson iterative solution scheme, 
-Adaptive time stepping based on slip-velocity criteria, 
-Fluid exchange between fracture and surrounding matrix, 
-Computation of seismicity-related metrics (moment magnitude, stress drop, slip distribution, etc.), and 
-Contact Algorithms
+- two-dimensional poromechanics with inertial effects;
+- XFEM representation of embedded fractures;
+- fracture flow and matrix–fracture hydraulic exchange;
+- rate-and-state friction;
+- nonlinear normal contact;
+- adaptive time stepping across reservoir and rupture timescales; and
+- seismicity metrics including slip, stress drop, seismic moment, and moment magnitude.
 
-The codebase includes two alternative formulations for enforcing normal contact constraints along fracture interfaces:
+Two contact formulations are considered: a computationally efficient penalty method and an exact Lagrange-multiplier method.
 
-🔹 Penalty Method
+## Repository status
 
-The penalty-based formulation enforces contact constraints approximately by introducing a penalty stiffness that penalizes interpenetration between fracture surfaces. This approach is computationally efficient and avoids introducing additional degrees of freedom.
+> **Documentation release.** The current `main` branch contains the project documentation and MIT license, but it does not yet contain the MATLAB source files or a reproducible example. Until those files are added, this repository should not be treated as a runnable software release.
 
-🔹 Lagrange Multiplier Method
+For the available hybrid implicit–explicit MATLAB implementation, see [Hybrid IMEX XFEM for Injection-Induced Seismicity](https://github.com/MohammadSabah93/Hybrid-implicit-explicit-XFEM-simulation-of-injection-induced-seismicity).
 
-The Lagrange multiplier formulation enforces contact constraints exactly by introducing additional unknowns representing contact tractions. This method ensures strict satisfaction of the impenetrability condition, at the cost of increased system size.
+## Reference
 
-## Citing
-If you use the developed code in your research, we ask you to cite the following publication
+If this formulation supports your research, please cite:
 
-Sabah, M., Hofmann, H., Cacace, M., Jalali, M. R., & Kivi, I. R. (2026). Modeling Injection-Induced Seismicity Using a Fully Coupled Poroviscoelasto-Dynamic Extended Finite Element Approach with Stabilized Contact and Rate-and-State Friction. Computers and Geotechnics, 191, 107803. https://doi.org/10.1016/j.compgeo.2025.107803 
+> Sabah, M., Hofmann, H., Cacace, M., Jalali, M. R., & Kivi, I. R. (2026). Modeling injection-induced seismicity using a fully coupled poroviscoelasto-dynamic extended finite element approach with stabilized contact and rate-and-state friction. *Computers and Geotechnics, 191*, 107803. https://doi.org/10.1016/j.compgeo.2025.107803
 
+Machine-readable citation metadata are provided in [`CITATION.cff`](CITATION.cff).
+
+## License
+
+Released under the [MIT License](LICENSE).
+
+## Contact
+
+Questions, reproducibility requests, and bug reports are welcome through [GitHub Issues](https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity/issues).
