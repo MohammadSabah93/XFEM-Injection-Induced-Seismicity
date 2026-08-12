@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this formulation in your research, please cite the associated article."
+title: "XFEM Simulator for Injection-Induced Seismicity"
+type: software
+authors:
+  - family-names: Sabah
+    given-names: Mohammad
+repository-code: "https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity"
+license: MIT
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Sabah
+      given-names: Mohammad
+    - family-names: Hofmann
+      given-names: H.
+    - family-names: Cacace
+      given-names: M.
+    - family-names: Jalali
+      given-names: M. R.
+    - family-names: Kivi
+      given-names: I. R.
+  title: "Modeling Injection-Induced Seismicity Using a Fully Coupled Poroviscoelasto-Dynamic Extended Finite Element Approach with Stabilized Contact and Rate-and-State Friction"
+  journal: "Computers and Geotechnics"
+  year: 2026
+  volume: 191
+  start: 107803
+  doi: "10.1016/j.compgeo.2025.107803"
