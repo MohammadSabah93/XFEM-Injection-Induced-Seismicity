@@ -4,10 +4,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Article DOI](https://img.shields.io/badge/Article-10.1016%2Fj.compgeo.2025.107803-blue)](https://doi.org/10.1016/j.compgeo.2025.107803)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--7260--6138-A6CE39)](https://orcid.org/0000-0002-7260-6138)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohammad%20Sabah-0A66C2)](https://www.linkedin.com/in/mohammad-sabah)
 
-A MATLAB research framework for simulating injection-induced fault reactivation with coupled poromechanics, XFEM fracture representation, nonlinear fault contact, rate-and-state friction, inertia, and dynamic rupture.
+A MATLAB research framework developed by **Mohammad Sabah** for computational geomechanics and numerical simulation of **injection-induced seismicity**, combining coupled poromechanics, the **extended finite element method (XFEM)**, nonlinear fault contact, **rate-and-state friction**, inertia, and dynamic rupture.
 
-This repository accompanies the published *Computers and Geotechnics* formulation by Sabah et al. (2026) and provides two alternative contact implementations for reproducible numerical experimentation.
+This repository accompanies the published *Computers and Geotechnics* formulation by Sabah et al. (2026) and provides two alternative contact implementations for reproducible numerical experimentation. The work is relevant to induced seismicity, fault reactivation, reservoir geomechanics, geothermal stimulation, coupled hydromechanical modeling, and earthquake-rupture simulation.
 
 ## Repository structure
 
@@ -112,8 +113,9 @@ Released under the [MIT License](LICENSE).
 
 ## Author
 
-**Mohammad Sabah**  
-Researcher in computational geomechanics and induced seismicity  
-[ORCID: 0000-0002-7260-6138](https://orcid.org/0000-0002-7260-6138)
+**Mohammad Sabah, PhD**  
+Computational geomechanics · induced seismicity · coupled multiphysics · XFEM · rate-and-state friction  
+Technische Universität Berlin  
+[ORCID](https://orcid.org/0000-0002-7260-6138) · [LinkedIn](https://www.linkedin.com/in/mohammad-sabah) · [GitHub](https://github.com/MohammadSabah93)
 
 Questions, reproducibility requests, and bug reports are welcome through [GitHub Issues](https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity/issues).
