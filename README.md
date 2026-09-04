@@ -2,11 +2,14 @@
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-research%20code-e16737)](https://www.mathworks.com/products/matlab.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compgeo.2025.107803-blue)](https://doi.org/10.1016/j.compgeo.2025.107803)
+[![Article DOI](https://img.shields.io/badge/Article-10.1016%2Fj.compgeo.2025.107803-blue)](https://doi.org/10.1016/j.compgeo.2025.107803)
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--7260--6138-A6CE39)](https://orcid.org/0000-0002-7260-6138)
 
-A MATLAB research framework for simulating injection-induced fault reactivation using a coupled poromechanical extended finite element method (XFEM), rate-and-state friction, dynamic rupture, and nonlinear fault contact.
+A MATLAB research framework for simulating injection-induced fault reactivation with coupled poromechanics, XFEM fracture representation, nonlinear fault contact, rate-and-state friction, inertia, and dynamic rupture.
 
-## Choose a contact formulation
+This repository accompanies the published *Computers and Geotechnics* formulation by Sabah et al. (2026) and provides two alternative contact implementations for reproducible numerical experimentation.
+
+## Repository structure
 
 The source code is maintained in two implementation branches:
 
@@ -15,15 +18,15 @@ The source code is maintained in two implementation branches:
 | [`Contact_Lagrange-Multiplier`](https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity/tree/Contact_Lagrange-Multiplier) | Stabilized Lagrange multiplier | `X_FEM_PoroElastic_Lagrange.m` |
 | [`Contact_Penalty`](https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity/tree/Contact_Penalty) | Penalty method | `X_FEM_PoroElastic_V5_penalty.m` |
 
-The `main` branch serves as the documentation and citation landing page.
+The `main` branch is intentionally used as the documentation, citation, and project landing page.
 
-## Capabilities
+## Numerical capabilities
 
 - two-dimensional coupled poroelastic deformation and fluid flow;
-- XFEM representation of an embedded fracture;
+- XFEM representation of an embedded fracture/fault;
 - matrix–fracture hydraulic exchange;
 - rate-and-state friction;
-- alternative penalty and Lagrange-multiplier contact formulations;
+- nonlinear fault contact using penalty or stabilized Lagrange-multiplier formulations;
 - inertia and dynamic boundary damping;
 - Newton–Raphson nonlinear solution;
 - adaptive time stepping across aseismic and seismic slip; and
@@ -34,40 +37,62 @@ The `main` branch serves as the documentation and citation landing page.
 ### Requirements
 
 - MATLAB;
-- all `.m` files from the selected branch available on the MATLAB path.
+- all `.m` files from the selected implementation branch available on the MATLAB path.
 
-A minimum MATLAB release and toolbox compatibility matrix have not yet been established.
+A minimum MATLAB release and toolbox compatibility matrix have not yet been formally established.
 
-### Run a formulation
+### Clone the repository
 
 ```bash
 git clone https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity.git
 cd XFEM-Injection-Induced-Seismicity
 ```
 
-For the Lagrange-multiplier version:
+### Stabilized Lagrange-multiplier formulation
 
 ```bash
 git checkout Contact_Lagrange-Multiplier
 ```
 
-Then run `X_FEM_PoroElastic_Lagrange.m` in MATLAB.
+Run in MATLAB:
 
-For the penalty version:
+```matlab
+X_FEM_PoroElastic_Lagrange
+```
+
+### Penalty formulation
 
 ```bash
 git checkout Contact_Penalty
 ```
 
-Then run `X_FEM_PoroElastic_V5_penalty.m` in MATLAB.
+Run in MATLAB:
 
-Before running, review the geometry and time-stepping settings in the selected driver, material and frictional properties in `defineModelParameters.m`, and boundary conditions in `defineBoundaryConditions.m`.
+```matlab
+X_FEM_PoroElastic_V5_penalty
+```
+
+Before running a case, review geometry and time-stepping controls in the selected driver, material and frictional properties in `defineModelParameters.m`, and boundary conditions in `defineBoundaryConditions.m`.
+
+## Recommended reproducibility checks
+
+For quantitative interpretation, document and test at least:
+
+- mesh resolution;
+- time-step limits and adaptive stepping parameters;
+- nonlinear convergence tolerance;
+- rate-and-state friction parameters;
+- fault-contact parameters;
+- damping parameters; and
+- mechanical and hydraulic boundary conditions.
+
+Mesh- and time-step-convergence studies should be performed before comparing physical outcomes across cases.
 
 ## Research-software status
 
-This code is intended for scientific development and numerical experimentation, not operational seismic-hazard forecasting. Users should independently verify the implementation and conduct mesh, time-step, and parameter-sensitivity studies before physical interpretation.
+This code is intended for scientific development, verification, and numerical experimentation. It is **not** an operational seismic-hazard forecasting tool. Users should independently verify the implementation and calibrate model parameters before site-specific interpretation.
 
-## Reference
+## Publication
 
 If this software supports your research, please cite:
 
@@ -75,10 +100,20 @@ If this software supports your research, please cite:
 
 Machine-readable citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
+## Related project
+
+For the hybrid implicit–explicit time-integration implementation, see:
+
+[`Hybrid-implicit-explicit-XFEM-simulation-of-injection-induced-seismicity`](https://github.com/MohammadSabah93/Hybrid-implicit-explicit-XFEM-simulation-of-injection-induced-seismicity)
+
 ## License
 
 Released under the [MIT License](LICENSE).
 
-## Contact
+## Author
+
+**Mohammad Sabah**  
+Researcher in computational geomechanics and induced seismicity  
+[ORCID: 0000-0002-7260-6138](https://orcid.org/0000-0002-7260-6138)
 
 Questions, reproducibility requests, and bug reports are welcome through [GitHub Issues](https://github.com/MohammadSabah93/XFEM-Injection-Induced-Seismicity/issues).
